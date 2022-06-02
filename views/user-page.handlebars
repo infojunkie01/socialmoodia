@@ -3,7 +3,21 @@
 <h1 id="userpage-username"></h1>
 <p>Followers: <span id="follower-count"></span></p>
 <p>Following: <span id="following-count"></span></p>
+
 <div></div> <!--Div to allow user to create post-->
-<div></div> <!--Div to allow user to see posts-->
+
+<!--Div to allow user to see user posts-->
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/user/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
 
 <script src="/javascript/add-post.js"></script>
