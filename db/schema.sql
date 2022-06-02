@@ -1,3 +1,4 @@
-DROP DATABASE IF EXISTS  social_moodia_db;
+DROP DATABASE IF EXISTS socialmoodia_db;
 
-CREATE DATABASE  social_moodia_db;
+CREATE DATABASE socialmoodia_db;
+
