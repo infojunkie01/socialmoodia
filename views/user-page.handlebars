@@ -1,10 +1,33 @@
-// shows profile, followers, posts, allows to create post
+<!--shows profile, followers, posts, allows to create post-->
 
 <h1 id="userpage-username"></h1>
 <p>Followers: <span id="follower-count"></span></p>
 <p>Following: <span id="following-count"></span></p>
 
-<div></div> <!--Div to allow user to create post-->
+{{#if sess.user}}
+<button type="submit">Follow</button>
+{{/if}}
+
+<!--Div to allow user to create post-->
+<section>
+    <h2>Create New Post</h2>
+
+    <form class="new-post-form">
+        <div>
+            <div class="user-icon">${{this.user-icon}}</div>
+            <input type="text" id="post-title" name="post-title" placeholder="What's happening?" />
+        </div>
+        <div>
+            <button class="image">
+              <i class="bi bi-card-image"></i>
+            </button>
+            <button class="gif">
+              <i class="bi bi-filetype-gif"></i>
+            </button>
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
 
 <!--Div to allow user to see user posts-->
 {{#if posts.length}}
