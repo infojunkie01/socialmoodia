@@ -35,3 +35,4 @@ User.belongsTo(Follow, {
     foreignKey: 'user_id'
 });
 
+module.exports = { User, Post, Follow, Comment };
