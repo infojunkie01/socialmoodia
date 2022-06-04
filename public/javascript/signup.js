@@ -17,10 +17,13 @@ async function signupFormHandler(event) {
             headers: {'Content-Type': 'application/json'}
         });
 
+        console.log("response", response)
+
         if(response.ok) {
             // If the user successfully signs up, redirect them to the home page
             document.location.replace('/');
         } else {
+            console.log("response", response)
             alert(response.statusText);
         }
     }
