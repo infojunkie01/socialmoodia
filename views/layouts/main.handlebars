@@ -6,27 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Socialmoodia</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Sociamoodia</a>
-      </h1>
-      <nav>
-        <div id="user"> <a href="/user"></a></div>   <!-- 'User' ideally should be the username -->
-        <!-- Commenting out login and signup buttons in the nav in case we decide to keep it
-        <a href="/login">Login</a>
-        <a href="/signup">Sign up</a> 
-        -->
+    {{#if loggedIn}}
+      <header>
+        <h1>
+          <a href="/">Sociamoodia</a>
+        </h1>
+        <nav>
+          <div id="user"> <a href="/user"></a></div> <!-- 'User' ideally should be the username -->
+          <!-- Commenting out login and signup buttons in the nav in case we decide to keep it
+          <a href="/login">Login</a>
+          <a href="/signup">Sign up</a> 
+          -->
+        </nav>
+      </header>
+      <main>
         <input type="text" placeholder="Search for user">
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
+        {{{ body }}}
+      </main>
+    {{else}}
+      {{> login }}
+    {{/if}}
+
     <footer>
     </footer>
   </div>
@@ -34,3 +39,5 @@
 </body>
 
 </html>
+
+<script src="/javascript/login.js"></script>

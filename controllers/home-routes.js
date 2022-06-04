@@ -43,7 +43,6 @@ router.get('/', (req, res) => {
       res.redirect('/');
       return;
     }
-  
     res.render('login');
   });
 
@@ -52,7 +51,6 @@ router.get('/', (req, res) => {
       res.redirect('/');
       return;
     }
-  
     res.render('signup');
   });
 
