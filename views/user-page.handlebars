@@ -1,6 +1,24 @@
 <!--shows profile, followers, posts, allows to create post-->
 
-<div class="user-info">
+{{> nav nav-items}}
+<section class="d-flex justify-content-center mt-5">
+  <div>
+    <form class="user-info">
+      <div class="user-icon"></div>
+      <div class="username">Username</div>
+      <div class="follow-count">
+        <p> following</p>
+        <p> followers</p>
+      </div>
+      <button type="button" class="edit-profile-btn">Edit Profile</button>
+    </form>
+  </div>
+</section>
+{{#if loggedIn}}
+<script src="/javascript/add-post.js"></script>
+{{/if}}
+
+{{!-- <div class="user-info">
     <div class="avatar"></div>
     <div class="username">{{user.username}}</div>
     <div class="follow-count">
@@ -32,7 +50,7 @@
         </div>
         <button type="submit" class="btn">Create</button>
     </form>
-</section>
+</section> --}}
 
 <!--Div to allow user to see user posts-->
 {{#if posts.length}}
@@ -47,5 +65,6 @@
     {{/each}}
   </ol>
 </section>
+{{/if}}
 
 <script src="/javascript/add-post.js"></script>
