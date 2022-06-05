@@ -1,12 +1,13 @@
 async function addPost(event) {
     event.preventDefault();
 
-    const post_content = document.querySelector('input[name="add-post-text"]').value;
-  
+    const body = document.querySelector('input[name="add-post-text"]').value.trim();
+    console.log(post_content);
+
     const response = await fetch(`/api/post`, {
       method: 'POST',
       body: JSON.stringify({
-        post_content
+        body
       }),
       headers: {
         'Content-Type': 'application/json'
