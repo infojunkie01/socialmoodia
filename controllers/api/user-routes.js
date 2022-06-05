@@ -24,11 +24,11 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'body', 'user_id']
+        attributes: ['id', 'body', 'user_id', 'created_at']
       },
       {
         model: Comment,
-        attributes: ['id', 'body'],
+        attributes: ['id', 'body', 'created_at'],
         include: {
           model: Post,
           attributes: ['title']
@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
   })
   .then(dbUserData => {
     req.session.save(() => {
-      req.session.user_id = dbUserData.id;
+      // req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
   
