@@ -1,0 +1,51 @@
+<!--shows profile, followers, posts, allows to create post-->
+
+<div class="user-info">
+    <div class="avatar"></div>
+    <div class="username">{{user.username}}</div>
+    <div class="follow-count">
+        <p>{{user.following-count}} following </p>
+        <p>{{user.follower-count}} followers </p>
+    </div>
+</div>
+
+{{#if sess.user}}
+<button type="submit">Follow</button>
+{{/if}}
+
+<!--Div to allow user to create post-->
+<section>
+    <h2>Create New Post</h2>
+
+    <form class="new-post-form">
+        <div>
+            <div class="user-icon">${{this.user-icon}}</div>
+            <input type="text" id="post-title" name="post-title" placeholder="What's happening?" />
+        </div>
+        <div>
+            <button class="image">
+              <i class="bi bi-card-image"></i>
+            </button>
+            <button class="gif">
+              <i class="bi bi-filetype-gif"></i>
+            </button>
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
+
+<!--Div to allow user to see user posts-->
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/user/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+
+<script src="/javascript/add-post.js"></script>
