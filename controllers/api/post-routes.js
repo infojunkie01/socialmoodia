@@ -10,9 +10,8 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'body',
-            'user_id'
         ],
-        order: [['created_at', 'DESC']],
+        // order: [['created_at', 'DESC']],
         include: [
             // Comment model here -- attached username to comment
             {
@@ -44,8 +43,7 @@ router.get('/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'body',
-            'user_id'
+            'body'
         ],
         include: [
             // include the Comment model here:

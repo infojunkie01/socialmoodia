@@ -18,6 +18,6 @@ async function addPost(event) {
     } else {
       alert(response.statusText);
     }
-}
+  }
   
-document.querySelector('#add-post-button').addEventListener('submit', addPost);
+  document.querySelector('#add-post-button').addEventListener('submit', addPost);
