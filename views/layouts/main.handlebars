@@ -21,19 +21,7 @@
         <a href="/"><img src="/images/logo.png" alt="type-based logo that says 'socialmoodia'" width="40%"
             height="40%"></a>
       </h1>
-      <nav id="nav-buttons-right" class="d-flex align-items-center m-3">
-        <button id="find-friends" class="pr-3" ><i class="fa-solid fa-user-group"></i></button> <!--Can be a dropdown or popup box that allows search, or can direct to new page-->
-        <button id="notifications" class="pr-3"><i class="fa-solid fa-bell"></i></button>
-        <button id="nav-user-profile" class="pr-1"><a href="/user"><img src="/images/profile-image.png"
-              alt="profile image of user" width="30" height="30"></a></button>
-        <div id="nav-dropdown" class="dropdown">
-          <button class="dropbtn"><i class="fa-solid fa-caret-down"></i></button>
-          <div class="dropdown-content">
-            <a id="settings" href="#">Settings</a>
-            <a id="logout" href="#">Log out</a>
-          </div>
-        </div>
-      </nav>
+      {{> nav nav-items}}
     </header>
 
     <main>
