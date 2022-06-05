@@ -1,7 +1,8 @@
 :root {
     --light-purple: #c090e7; 
     --light-purple-hover: #a579c9; 
-  }
+}
+
 
 button{
     background-color: var(--light-purple);
@@ -91,4 +92,5 @@ input[type="text"] {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
 
