@@ -20,6 +20,7 @@ async function loginFormHandler(event) {
 
         // If the route returns a code 200, redirect the user to their homepage
         if (response.ok) {
+            console.log("Logged in.");
             document.location.replace('/');
         } else {
             alert("No user with that login");

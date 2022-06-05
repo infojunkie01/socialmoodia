@@ -40,6 +40,6 @@ const sess = {
   
   // Start the server with force set to false -- meaning the database will not be empty on server start
   // Or true -- meaning the database will be fresh on server start
-  sequelize.sync({ force: true }).then(() => {
+  sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });

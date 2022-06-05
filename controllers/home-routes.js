@@ -37,8 +37,9 @@ router.get('/', (req, res) => {
           res.status(500).json(err);
         });
     }
-
-    res.redirect('/login');
+    else {
+      res.redirect('/login');
+    }
 
   });
 
