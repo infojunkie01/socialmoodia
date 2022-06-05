@@ -21,7 +21,10 @@ button :hover{
     background-color: var(--light-purple-hover);
     border: none;
 }
-  
+
+emoji-picker{
+    display:none;
+}
 
 header {
     border-bottom: 1px solid lightgray;
@@ -35,6 +38,8 @@ input{
 input[type="text"] {
     padding: 0px 10px 0 10px;
 }
+
+
 
 
 #nav-buttons-right button{
