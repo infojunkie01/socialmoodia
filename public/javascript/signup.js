@@ -8,7 +8,7 @@ async function signupFormHandler(event) {
     // Check to make sure neither of the values are null
     if(username && password) {
         // Access the post route in api/users with the following data
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/user', {
             method: 'post',
             body: JSON.stringify({
                 username, 

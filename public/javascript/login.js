@@ -9,15 +9,15 @@ async function loginFormHandler(event) {
 
     // Check to make sure both fields aren't blank before running more code
     if (username && password) {
-        const response = await fetch('/api/users/login', {
-            method: 'post',
+        const response = await fetch('/api/user/login', {
+            method: 'POST',
             body: JSON.stringify({
                 username,
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-
+        
         // If the route returns a code 200, redirect the user to their homepage
         if (response.ok) {
             console.log("Logged in.");
