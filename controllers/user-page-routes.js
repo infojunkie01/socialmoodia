@@ -48,12 +48,13 @@ router.get('/', withAuth, (req, res) => {
       attributes: [
         'id',
         'body',
-        // 'created_at'
+        'created_at'
       ],
       include: [
         {
           model: Comment,
-          attributes: ['id', 'body', 'post_id', 'user_id'],
+          //attributes: ['id', 'body', 'post_id', 'user_id'],
+          attributes: ['id', 'body', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username' ]
@@ -95,13 +96,13 @@ router.get('/create/', withAuth, (req, res) => {
       attributes: [
         'id',
         'body',
-        // 'created_at'
+        'created_at'
       ],
       include: [
         {
           model: Comment,
-          attributes: ['id', 'body', 'post_id', 'user_id'],
-          // attributes: ['id', 'body', 'post_id', 'user_id', 'created_at'],
+          //attributes: ['id', 'body', 'post_id', 'user_id'],
+          attributes: ['id', 'body', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username' ]
