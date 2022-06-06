@@ -1,14 +1,16 @@
-
 {{> add-post}}
 
-<section class="mx-auto w-100 pt-5 container">
+<ol class="main-feed">
+  <section class="mx-auto w-100 pt-5 container">
     <ol class="main-feed pl-0">
-        {{#each posts}}
-         <hr>
-          {{> post-info}}
-        {{/each}}
+      {{#each posts}}
+      <hr>
+      {{> post-info}}
+      {{/each}}
     </ol>
-</section>
+  </section>
+
+</ol>
 
 
 <script src="/javascript/add-post.js"></script>
