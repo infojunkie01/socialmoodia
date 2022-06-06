@@ -10,15 +10,14 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'body',
-            //'created_at'
+            'created_at'
         ],
-        //order: [['created_at', 'DESC']],
+        order: [['created_at', 'DESC']],
         include: [
             // Comment model here -- attached username to comment
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                //attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -46,14 +45,13 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'body',
-            //'created_at'
+            'created_at'
         ],
         include: [
             // include the Comment model here:
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                // attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
 
                 include: {
                   model: User,
@@ -66,8 +64,7 @@ router.get('/:id', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                //attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
