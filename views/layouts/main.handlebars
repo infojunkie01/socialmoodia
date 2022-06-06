@@ -55,6 +55,11 @@
     insertText(document.querySelector('#add-post-text'), e.detail.unicode)
   })
 
+ document.querySelector('emoji-picker').addEventListener('emoji-click', e => {
+    insertText(document.querySelector('#add-comment-text'), e.detail.unicode)
+  })
+
+
   $(document).ready(function(){
   $('#add-post-text').click(function(){
     $('#emoji-picker-post').toggle();
