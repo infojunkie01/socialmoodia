@@ -1,14 +1,16 @@
-<li class="post d-flex mb-3">
-    <button id="user-profile-icon" type="submit" class="align-top mr-4 pl-0"><a href="/user-page"><img src="/images/profile-image.png"
+ {{#each this}}
+<li class="comment d-flex mb-3">
+    <button id="user-profile-icon" class="align-top mr-4 pl-0"><a href="/user-page"><img src="/images/profile-image.png"
                 alt="profile image of user" width="45" height="45"></a></button>
-    <a class="post-info-link w-100" href="/post/{{id}}">
-        <div class="post-info w-100">
-            <b>{{user.username}}</b> <span class="post-date text-lightgray"> on {{format_date created_at}}</span>
-            <p class="mb-0">{{comment_text}}s</p>
-            <p class=" float-right text-lightgray">
-                <span> {{comments.length}}</span> <i class="fa-solid fa-message"></i>
-            </p>
-        </div>
-    </a>
+
+    <div class="comment-info w-100">
+        <b>{{comment.username}}</b> <span class="post-date text-lightgray"> • {{format_date created_at}}</span>
+        <p class="mb-0">{{comment_text}}</p>
+        <p class=" float-right text-lightgray">
+            <span> {{!-- {{count for comments shoudl go here}} --}} X</span> <i class="fa-solid fa-message"></i>
+        </p>
+    </div>
+
 </li>
 
+ {{/each}}

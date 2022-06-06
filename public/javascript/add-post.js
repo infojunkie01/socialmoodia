@@ -24,3 +24,19 @@ async function addPost(event) {
   }
 
  $(".new-post-form").off().submit(addPost);
+
+
+// disables typing except for backspace in input field
+$('#add-post-text').keydown(function(e) {
+  if(e.keyCode !== 8) {
+      e.preventDefault();
+  }
+});
+
+
+// $('#input-text').keydown(function(e) {
+//   if(e.keyCode !== 8) {
+//       e.preventDefault();
+//   }
+// });
+

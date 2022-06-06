@@ -27,3 +27,13 @@ async function commentFormHandler(event) {
       }
   }
   document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+
+
+// disables typing except for backspace in input field
+$('#add-comment-text').keydown(function(e) {
+    if(e.keyCode !== 8) {
+        e.preventDefault();
+    }
+  });
+  
+  
