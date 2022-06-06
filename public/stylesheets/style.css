@@ -1,14 +1,15 @@
 :root {
     --light-purple: #c090e7; 
     --light-purple-hover: #a579c9; 
-  }
+}
+
 
 button{
     background-color: var(--light-purple);
     border: none;
-    border-radius: 25px !important;
+    border-radius: 215px !important;
     color: white;
-    padding: 5px 0 5px 0;
+    padding: 5px 12px 5px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -26,10 +27,21 @@ header {
     border-bottom: 1px solid lightgray;
 }
 
+input{
+    border-radius: 25px;
+    border: 1px solid lightgray;
+}
+
+input[type="text"] {
+    padding: 0px 10px 0 10px;
+}
+
+
 #nav-buttons-right button{
     background: none;
     color: var(--light-purple);
     font-size: 18px;
+    padding: 5px 0px 5px 0px;
 }
 
 #nav-buttons-right button :hover{
@@ -38,6 +50,17 @@ header {
     border: none;
 }
 
+#user-profile-icon{
+    background: none;
+    border: none;
+    width: 45px;
+    height: 45px;
+}
+
+#user-profile-icon a img{ 
+    vertical-align: top;
+    margin-top: -5px;
+}
 
 .dropdown {
     position: relative;
@@ -69,4 +92,5 @@ header {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
 

@@ -24,9 +24,12 @@
       {{> nav nav-items}}
     </header>
 
-    <main>
+    <main class="d-flex col-lg-5 col-md-10 col-sm-12 mx-auto">
 
-      {{!-- {{{ body }}} --}}
+      {{> add-post}}
+
+      {{{ body }}}
+
     </main>
     {{else}}
     {{{ body }}}
@@ -39,3 +42,5 @@
 </body>
 
 </html>
+
+<script src="/javascript/add-post.js"></script>
