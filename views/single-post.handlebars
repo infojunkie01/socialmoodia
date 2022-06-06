@@ -1,20 +1,34 @@
+<section class="mx-auto w-100 pt-5 container">
+  {{> post-info}}
 
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+  {{#if loggedIn}}
+  <hr>
+  <div class="d-flex">
+    <button id="user-profile-icon" class="align-top mr-4 pl-0"><a href="/user-page"><img src="/images/profile-image.png"
+          alt="profile image of user" width="45" height="45"></a></button>
+    <form class="comment-form w-100">
+      <div>
+        <input name="add-comment-text" class="input w-100" type="text" placeholder="Reply here"></input>
+        <emoji-picker id="emoji-picker-post"></emoji-picker>
+      </div>
+      <button class="comment-btn float-right mt-3">Comment</button>
+
+    </form>
   </div>
+  {{/if}}
 
-  <div class="buttons">
-        <button class="comment-btn">Comment</button>
-        <button class="react-btn">React</button>
-  </div>
-</form>
-{{/if}}
+  <hr >
 
-{{> comments post.comments}}
+  {{> comments post.comments}}
+
+
+</section>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/reaction.js"></script>
+{{!-- <script src="/javascript/reaction.js"></script> --}}
 {{/if}}
+
+
+
+<script src="/javascript/add-post.js"></script>
