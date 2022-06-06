@@ -8,7 +8,7 @@ async function signupFormHandler(event) {
     // Check to make sure neither of the values are null
     if(username && password) {
         // Access the post route in api/users with the following data
-        const response = await fetch('/api/user', {
+        const response = await fetch('/api/user/', {
             method: 'post',
             body: JSON.stringify({
                 username, 
@@ -17,11 +17,11 @@ async function signupFormHandler(event) {
             headers: {'Content-Type': 'application/json'}
         });
 
-        console.log("response", response)
+        //console.log("response", response);
 
         if(response.ok) {
-            // If the user successfully signs up, redirect them to the home page
-            document.location.replace('/');
+            // If the user successfully signs up, redirect them to the login page
+            document.location.replace('/login');
         } else {
             console.log("response", response)
             alert(response.statusText);
