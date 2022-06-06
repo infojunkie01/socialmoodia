@@ -40,7 +40,7 @@ router.put('/:id', withAuth, (req, res) => {
             }
         })
         .then(dbCommentData => {
-            if (!dbPCommentData) {
+            if (!dbCommentData) {
                 res.status(404).json({ message: 'No comment found with this id' });
                 return;
             }

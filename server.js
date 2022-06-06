@@ -18,28 +18,28 @@ const sess = {
     saveUninitialized: true,
     store: new SequelizeStore({
       db: sequelize
-    })
-  };
+  })
+};
   
-  // Connect the server to Sequelize
-  app.use(session(sess));
+// Connect the server to Sequelize
+app.use(session(sess));
   
-  const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
   
-  // Use our helper functions for handlebars
-  const hbs = exphbs.create({ helpers });
+// Use our helper functions for handlebars
+const hbs = exphbs.create({ helpers });
   
-  app.engine('handlebars', hbs.engine);
-  app.set('view engine', 'handlebars');
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
   
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: false }));
-  app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
   
-  app.use(require('./controllers/'));
+app.use(require('./controllers/'));
   
-  // Start the server with force set to false -- meaning the database will not be empty on server start
-  // Or true -- meaning the database will be fresh on server start
-  sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  });
+// Start the server with force set to false -- meaning the database will not be empty on server start
+// Or true -- meaning the database will be fresh on server start
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
