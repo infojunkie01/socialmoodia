@@ -8,13 +8,13 @@ router.get('/', (req, res) => {
       Post.findAll({
         attributes: [
           'id',
-          'body'
-          // 'created_at'
+          'body',
+          'created_at'
         ],
         include: [
           {
             model: Comment,
-            attributes: ['id', 'body', 'post_id',  'user_id',],
+            attributes: ['id', 'comment_text', 'post_id',  'user_id', 'created_at'],
             include: {
               model: User,
               attributes: ['username']
@@ -68,13 +68,13 @@ router.get('/', (req, res) => {
       },
       attributes: [
         'id',
-        'body'
-        // 'created_at'
+        'body',
+        'created_at'
       ],
       include: [
         {
           model: Comment,
-          attributes: ['id', 'body', 'post_id', 'user_id'],
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -109,4 +109,3 @@ router.get('/', (req, res) => {
 
 
 module.exports = router;
-

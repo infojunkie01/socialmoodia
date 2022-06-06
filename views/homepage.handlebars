@@ -1,18 +1,18 @@
-<div id="create-post">
+{{> add-post}}
 
-</div>
+<ol class="main-feed pl-0">
+  <section class="mx-auto w-100 pt-5 container">
+    <ol class="main-feed pl-0">
+      {{#each posts}}
+      <hr>
+      {{> post-info}}
+      {{/each}}
+    </ol>
+  </section>
 
-<ol class="main-feed">
-  {{>post-info post}}
-  {{#each posts}}
-  <li>
-    <div class="post">
-    </div>
-  </li>
-  {{/each}}
 </ol>
 
 
 <script src="/javascript/add-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<!-- <script src="/javascript/comment.js"></script> -->
 <script src="/javascript/reaction.js"></script>
