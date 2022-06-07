@@ -32,7 +32,8 @@ router.get('/', withAuth, (req, res) => {
       .then(dbPostData => {
         // serialize data before passing to template
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('user-page', { posts, loggedIn: true });
+        const sess = req.session;
+        res.render('user-page', { posts, loggedIn: true, sess });
       })
       .catch(err => {
         console.log(err);

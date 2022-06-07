@@ -2,7 +2,7 @@
 
 <section class="mx-auto w-100 pt-5 container">
   <div class="d-flex flex-wrap justify-content-center pb-2">
-    {{> profile-info user-page}}
+    {{> profile-info userData}}
   </div>
   <form class="d-flex flex-wrap justify-content-center pb-3">
     <button class="follow-button mx-auto  ">Follow</button>
@@ -18,7 +18,6 @@
         {{#each posts as |post|}}
         <li class="">
           {{> post-info post}}
-          <a href="/user/edit/{{post.id}}" class="edit-link float-right ">Edit</a>
         </li>
         <hr class="mt-5">
         {{/each}}

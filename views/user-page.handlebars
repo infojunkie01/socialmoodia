@@ -1,8 +1,22 @@
 <!--shows profile, followers, posts, allows to create post-->
-
+{{ log this }}
 <section class="mx-auto w-100 pt-5 container">
   <div class="d-flex flex-wrap justify-content-center ">
-    {{> profile-info user-page}}
+    <div class="user-icon mx-auto pb-3">
+    <img src="/images/profile-image.png" alt="profile image of user" width="90" height="90" class="mx-auto">
+  </div>
+<div class="username col-12 mx-auto">
+    <h4 class="text-center">
+        <strong>{{sess.username}}</strong>
+        
+    </h4>
+</div>
+<div class="follow-count">
+    <p>
+        <span class="font-weight-bold">X </span> following &nbsp;
+        <span class="font-weight-bold">X </span> following
+    </p>
+</div>
   </div>
 <hr class="mb-4">
 </section>
