@@ -63,6 +63,11 @@ router.get('/', (req, res) => {
     res.render('signup');
   });
 
+  router.get('/search', (req, res) => {
+    if (req.session.loggedIn) {
+      res.render('search');
+    }
+  })
   
   router.get('/post/:id', (req, res) => {
     Post.findOne({
