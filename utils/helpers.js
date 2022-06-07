@@ -11,5 +11,11 @@ module.exports = {
       }
   
       return word;
+    },
+    is_equal: (user, session) => {
+      if (user === session){
+        return true;
+      }
+      return false;
     }
 }
