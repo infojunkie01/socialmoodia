@@ -1,4 +1,32 @@
-{{> nav nav-items}}
+<!--shows profile, followers, posts, allows to create post-->
 
-<div class="user-posts">
-</div>
+<section class="position-relative justify-content-center ">
+  <div>
+    <form class="user-info">
+      <div class="user-icon"></div>
+      <div class="username"><strong>{{{user.username}}}</strong></div>
+      <div class="follow-count">
+        <p> following</p>
+        <p> followers</p>
+      </div>
+      <button type="button" class="edit-profile-btn">Follow</button>
+    </form>
+  </div>
+</section>
+
+<!--Div to allow user to see user posts-->
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
