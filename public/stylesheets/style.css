@@ -4,6 +4,16 @@
     --dark-gray: rgb(50, 50, 50); 
 }
 
+a{
+    text-decoration: none !important;
+    color: var(--dark-gray);
+}
+
+a:hover{
+    text-decoration: none !important;
+    color: var(--light-purple-hover) !important;
+}
+
 
 button{
     background-color: var(--light-purple);
@@ -40,7 +50,10 @@ input[type="text"] {
     padding: 0px 10px 0 10px;
 }
 
-
+ol {
+    list-style-type: none;
+    padding: 0;
+}
 
 
 #nav-buttons-right button{
@@ -66,6 +79,10 @@ input[type="text"] {
 #user-profile-icon a img{ 
     vertical-align: top;
     margin-top: -5px;
+}
+
+.edit-link{
+    color: var(--light-purple) !important;
 }
 
 .dropdown {
