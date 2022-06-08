@@ -46,7 +46,7 @@ input{
     border: 1px solid lightgray;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
     padding: 0px 10px 0 10px;
 }
 
