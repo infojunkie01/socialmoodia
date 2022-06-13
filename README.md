@@ -7,6 +7,8 @@ Socialmoodia is a social media website that allows users to make posts and comme
 ## Table of Contents
 
 - [Website](#website)
+- [Technologies used](#technologies-used)
+- [Future developments](#future-developments)
 - [How to Contribute](#how-to-contribute)
 - [Questions](#questions)
 
@@ -15,6 +17,16 @@ Socialmoodia is a social media website that allows users to make posts and comme
 ![socialmoodia](https://user-images.githubusercontent.com/85321444/173248243-9efa2d31-4dc0-467d-bf13-4f4e7ba5d8f9.jpg)
 
 https://sheltered-eyrie-00891.herokuapp.com/
+
+## Technologies used
+HTML, CSS, Bootstrap, JavaScript, jquery, npm emoji-picker-element, mysql2, sequelize, express
+
+## Future developments
+
+- Add search user feature
+- Add follow feature
+- Allow users to delete/edit own posts
+- Allow users to add profile photo
 
 ## How to Contribute
 
